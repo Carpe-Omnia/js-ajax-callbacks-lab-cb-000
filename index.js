@@ -12,6 +12,6 @@ $(document).ready(function (){
 });
 
 function htmlify(item){
-  var thing = `<p> ${item.name} </p>` ;
+  var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> </p>` ;
   return thing ;
 }
