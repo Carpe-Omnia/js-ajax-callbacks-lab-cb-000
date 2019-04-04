@@ -5,7 +5,10 @@ $(document).ready(function (){
     console.log(term) ;
     var base = `https://api.github.com/search/repositories?q=${term}` ;
     $.get(base, function(data){
-      document.getElementById('results').innerHTML += htmlify(data.items[0]) ;
+      var mapData = data.items.map(function(item){
+        return htmlify(item)
+      })
+      document.getElementById('results').innerHTML += mapData ;
       alert("repos loaded")
     })
   })
