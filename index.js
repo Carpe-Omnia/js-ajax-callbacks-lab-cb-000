@@ -30,8 +30,10 @@ function showCommits(url){
 
 function doCommits(commit){
   var sha = commit.sha ;
-  var login = commit.author.login ;
+  var login = commit.author.login ; 
   var name = commit.author.name ;
-  var imglink = commit.author.avatar_url ;
-
+  var imglink = commit.author.avatar_url ; 
+  var img = `<img src="${imglink}" />`
+  var thing = `<p> sha: ${sha} . name: ${name} . login: ${login} . ${img} </p>` ; 
+  return thing ;
 }
