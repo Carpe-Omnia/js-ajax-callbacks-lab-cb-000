@@ -15,6 +15,12 @@ $(document).ready(function (){
 });
 
 function htmlify(item){
-  var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> </p>` ;
+  var show = `<span onClick='showCommits(${item.git_commits_url})' > Show Commits </span>`
+  var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> </p>` ;
   return thing ;
+}
+function showCommits(url){
+  $.get(url, function(data){
+    console.log(data)
+  })
 }
