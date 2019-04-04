@@ -15,12 +15,14 @@ $(document).ready(function (){
 });
 
 function htmlify(item){
-  var show = `<span onClick='showCommits(${item.commits_url})' > Show Commits </span>`
+  var show = `<span onClick='showCommits()' > Show Commits </span>`
   var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} </p>` ;
   return thing ;
 }
 function showCommits(url){
-  $.get(url, function(data){
-    console.log(data)
-  })
+  //$.get(url, function(data){
+    //console.log(data)
+  //})
+  console.log("showing commits")
 }
+//${item.commits_url}
