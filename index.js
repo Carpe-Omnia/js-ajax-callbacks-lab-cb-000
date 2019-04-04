@@ -16,8 +16,11 @@ $(document).ready(function (){
 
 function htmlify(item){
   var commits = item.commits_url.replace("{/sha}", "")
-  var show = `<span onclick="showCommits('${commits}')" > Show Commits </span>`
-  var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} </p>` ;
+  var show = `<span onclick="showCommits('${commits}')" > Show Commits </span>` ;
+  var link = `<a href="${item.owner.html_url}" >Owner</a>` ;
+  var img = `<img src="${item.owner.avatar_url}" />`
+  var owner = `owner. login: ${item.owner.login}. ${link} ${img}`
+  var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} <br/> ${owner} </p>` ;
   return thing ;
 }
 function showCommits(url){
