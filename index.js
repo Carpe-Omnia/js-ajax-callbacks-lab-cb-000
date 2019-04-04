@@ -5,8 +5,13 @@ $(document).ready(function (){
     console.log(term) ;
     var base = `https://api.github.com/search/repositories?q=${term}` ;
     $.get(base, function(data){
-      $('#results').html(data.items[0]) ;
+      $('#results').innerHTML += htmlify(data.items[0]) ;
       alert("repos loaded")
     })
   })
 });
+
+function htmlify(item){
+  var thing = `<p> ${item.name} </p>` ;
+  return thing ;
+}
