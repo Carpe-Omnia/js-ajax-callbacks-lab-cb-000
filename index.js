@@ -9,7 +9,7 @@ $(document).ready(function (){
         return htmlify(item)
       })
       document.getElementById('results').innerHTML += mapData ;
-      alert("repos loaded")
+    //  alert("repos loaded")
     })
   })
 });
@@ -23,8 +23,8 @@ function htmlify(item){
 function showCommits(url){
   $.get(url, function(data){
     console.log(data) ;
-    var commits = data.map(function(data){
-      return doCommits(data) ;
+    var commits = data.map(function(commit){
+      return doCommits(commit) ;
     })
     document.getElementById("details").innerHTML += commits ;
   })
