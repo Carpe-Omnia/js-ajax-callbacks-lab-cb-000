@@ -19,7 +19,7 @@ function htmlify(item){
   var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} </p>` ;
   return thing ;
 }
-function showCommits(url){
+function showCommits(){
   //$.get(url, function(data){
     //console.log(data)
   //})
