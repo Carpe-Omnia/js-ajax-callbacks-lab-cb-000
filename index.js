@@ -15,7 +15,7 @@ $(document).ready(function (){
 });
 
 function htmlify(item){
-  var show = `<span onClick="showCommits(${item})" > Show Commits </span>`
+  var show = `<span onclick="showCommits(${item.commits_url})" > Show Commits </span>`
   var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} </p>` ;
   return thing ;
 }
@@ -24,6 +24,6 @@ function showCommits(url){
     //console.log(data)
   //})
   console.log("showing commits") ;
-  console.log(url.commits_url);
+  console.log(url);
 }
 //${item.commits_url}
