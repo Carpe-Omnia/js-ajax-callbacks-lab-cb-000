@@ -10,7 +10,9 @@ $(document).ready(function (){
       })
       document.getElementById('results').innerHTML += mapData ;
     //  alert("repos loaded")
-    })
+  }).fail(function(){
+    document.getElementById("errors").innerHTML = "I'm sorry, there's been an error. Please try again."
+  })
   })
 });
 
@@ -30,6 +32,8 @@ function showCommits(url){
       return doCommits(commit) ;
     })
     document.getElementById("details").innerHTML += commits ;
+  }).fail(function(){
+    document.getElementById("errors").innerHTML = "I'm sorry, there's been an error. Please try again."
   })
   console.log("showing commits") ;
   console.log(url);
