@@ -16,7 +16,7 @@ $(document).ready(function (){
 
 function htmlify(item){
   var commits = item.commits_url.replace("{/sha}", "")
-  var show = `<span onclick="showCommits(${commits})" > Show Commits </span>`
+  var show = `<span onclick="showCommits('${commits}')" > Show Commits </span>`
   var thing = `<p>name: ${item.name} <br/> Description: ${item.description} <br/> <a href='${item.html_url}'> link </a> <br/> ${show} </p>` ;
   return thing ;
 }
