@@ -22,8 +22,8 @@ function htmlify(item){
 }
 function showCommits(url){
   $.get(url, function(data){
-    console.log(data) ;
     var commits = data.map(function(commit){
+      console.log(commit) ;
       return doCommits(commit) ;
     })
     document.getElementById("details").innerHTML += commits ;
