@@ -23,7 +23,7 @@ function showCommits(url){
   //$.get(url, function(data){
     //console.log(data)
   //})
-  console.log("showing commits")
+  console.log("showing commits") ;
   console.log(url);
 }
 //${item.commits_url}
