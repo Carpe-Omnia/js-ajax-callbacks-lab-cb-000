@@ -24,6 +24,6 @@ function showCommits(url){
     //console.log(data)
   //})
   console.log("showing commits") ;
-  console.log(url);
+  console.log(url.commits_url);
 }
 //${item.commits_url}
