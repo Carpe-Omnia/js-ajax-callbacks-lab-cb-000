@@ -27,3 +27,11 @@ function showCommits(url){
   console.log("showing commits") ;
   console.log(url);
 }
+
+function doCommits(commit){
+  var sha = commit.sha ;
+  var login = commit.author.login ; 
+  var name = commit.author.name ;
+  var imglink = commit.author.avatar_url ; 
+  
+}
